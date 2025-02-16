@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Chats from "./Chats";
 
-const socket = io.connect("https://chat-app-server-rose-nine.vercel.app");
+const socket = io.connect("https://chat-app-server3.vercel.app/");
 
 export default function App() {
   const [username, setUsername] = useState("");
