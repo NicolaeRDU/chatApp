@@ -4,7 +4,11 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 
-app.use(cors({ origin: "*" }));
+app.use(cors({ 
+  origin: "https://chat-app-rust-tau-39.vercel.app",
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 const server = http.createServer(app);
 
 const io = new Server(server, {
