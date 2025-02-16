@@ -15,12 +15,12 @@
   ],
   "headers": [
     {
-      "key": "Access-Control-Allow-Origin",
+      "name": "Access-Control-Allow-Origin",
       "value": "https://chat-app-server-rose-nine.vercel.app"
     },
-    { "key": "Access-Control-Allow-Methods", "value": "GET,POST,OPTIONS" },
+    { "name": "Access-Control-Allow-Methods", "value": "GET,POST,OPTIONS" },
     {
-      "key": "Access-Control-Allow-Headers",
+      "name": "Access-Control-Allow-Headers",
       "value": "X-Requested-With,Content-Type"
     }
   ]
