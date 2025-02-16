@@ -2,26 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "./index.js",
+      "src": "*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/",
-      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
-    }
-  ],
-  "headers": [
-    {
-      "name": "Access-Control-Allow-Origin",
-      "value": "https://chat-app-server-rose-nine.vercel.app"
-    },
-    { "name": "Access-Control-Allow-Methods", "value": "GET,POST,OPTIONS" },
-    {
-      "name": "Access-Control-Allow-Headers",
-      "value": "X-Requested-With,Content-Type"
+      "dest": "/"
     }
   ]
 }
