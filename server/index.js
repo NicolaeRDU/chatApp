@@ -9,7 +9,7 @@ app.use(cors());
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://chat-app-server-rose-nine.vercel.app"
+    "https://chat-app-client3.vercel.app/"
   );
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
