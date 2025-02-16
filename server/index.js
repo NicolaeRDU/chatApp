@@ -4,20 +4,13 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 
-app.use(
-  cors({
-    origin: "https://chat-app-client-seven-delta.vercel.app",
-    methods: ["GET", "POST"],
-    credentials: true,
-  })
-);
+app.use(cors());
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-app-client-seven-delta.vercel.app",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST"],
-
     credentials: true,
   },
 });
