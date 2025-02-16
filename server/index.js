@@ -5,7 +5,7 @@ const cors = require("cors");
 const { Server } = require("socket.io");
 
 app.use(cors({ 
-  origin: "https://chat-app-rust-tau-39.vercel.app",
+  origin: "https://chat-app-client-seven-delta.vercel.app",
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-app-rust-tau-39.vercel.app",
+    origin: "https://chat-app-client-seven-delta.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
   },
