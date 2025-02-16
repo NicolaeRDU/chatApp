@@ -4,7 +4,7 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -13,6 +13,10 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
     credentials: true
   },
+});
+
+app.get("/", (req, res) => {
+  res.json("Hello");
 });
 
 io.on("connection", (socket) => {
