@@ -5,6 +5,18 @@ const cors = require("cors");
 const { Server } = require("socket.io");
 
 app.use(cors());
+
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://chat-app-server-rose-nine.vercel.app"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+});
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
