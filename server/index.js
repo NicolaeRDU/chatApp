@@ -11,6 +11,7 @@ const io = new Server(server, {
   cors: {
     origin: "https://chat-app-rust-tau-39.vercel.app",
     methods: ["GET", "POST"],
+    credentials: true
   },
 });
 
