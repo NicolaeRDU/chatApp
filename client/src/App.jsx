@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Chats from "./Chats";
 
-const socket = io.connect("/api");
+const socket = io.connect("http://localhost:3001");
 
 export default function App() {
   const [username, setUsername] = useState("");
@@ -32,7 +32,7 @@ export default function App() {
             }}
           />
           <input
-            type="text"
+            type="password"
             placeholder="Room ID"
             value={room}
             onChange={(e) => {
